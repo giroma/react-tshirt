@@ -28,7 +28,6 @@ class App extends Component {
     }
     this.changeColor = (e) => {
       // this.calculatePrice();
-      console.log(e.target.value);
       this.setState({color: e.target.value})
     }
     //functions in constructor
@@ -36,9 +35,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" className="container">
+      <div className="container">
         <div className="row">
-          <div className="col-3">
+          <div className="col">
             <CustomText text={this.state.text} changeText={this.changeText}
                         color={this.state.color} changeColor={this.changeColor}/>
           </div>

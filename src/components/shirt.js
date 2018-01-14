@@ -5,8 +5,8 @@ class Shirt extends Component {
   render() {
     return (
       <div className="shirt">
-        <img style={{backgroundColor: this.props.color, width: 300}} src="shirt.svg" />
-        <div className="text">{this.props.text}</div>
+        <img style={{backgroundColor: this.props.color, width: 300}} src="shirt2.svg.png" alt="shirt" />
+        <div className="text" style={{color: "gray"}}>{this.props.text}</div>
       </div>
     );
     // ...
