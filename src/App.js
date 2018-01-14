@@ -27,6 +27,8 @@ class App extends Component {
     }
     this.changeType = (e) => {
       this.setState({type: e.target.value})
+      this.setState({material: 'light-cotton'})
+      this.setState({color: 'white'})
     }
     this.changeMaterial = (e) => {
       this.setState({material: e.target.value})
@@ -41,18 +43,18 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-4 border">
+          <div className="col-md-4">
             <CustomText state={this.state} changeText={this.changeText}
                         changeType={this.changeType} changeMaterial={this.changeMaterial}
                         changeColor={this.changeColor}/>
           </div>
 
-          <div className="col-md-4 border">
+          <div className="col-md-4" style={{align: "center"}}>
             <Shirt text={this.state.text} changeText={this.changeText}
                    color={this.state.color}/>
           </div>
 
-          <div className="col-md-4 border">
+          <div className="col-md-4">
             <Price state={this.state}/>
           </div>
         </div>

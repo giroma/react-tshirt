@@ -21,18 +21,31 @@
 .App-intro {
   font-size: large;
 }
+
 .shirt {
   position: relative;
 }
+
 .text {
   position: absolute;
+  color: gray;
   font-size: 25px;
-  left: 100px;
   top: 100px;
-
+  left: 120px;
 }
-.border {
-  border: 1px solid red;
+
+.shirt img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price {
+  font-size: 25px;
+}
+
+.price span{
+  float: right;
 }
 
 @keyframes App-logo-spin {
