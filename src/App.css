@@ -48,6 +48,17 @@
   float: right;
 }
 
+.color-preview {
+  border: 1px solid #CCC;
+  margin: 2px;
+  vertical-align: top;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -26,6 +26,17 @@ class CustomText extends Component {
           {isSweater ?  <option value="yellow">Yellow +$4</option>: "" }
         </select>
         <input value={this.props.state.text} onChange={this.props.changeText}></input>
+        <ul class="nav" onClick={this.props.changeColor}>
+          <li className="color-preview" style={{backgroundColor: "white" }}></li>
+          <li className="color-preview" style={{backgroundColor: "black" }}></li>
+          <li className="color-preview" style={{backgroundColor: "#616161" }}></li>
+          <li className="color-preview" style={{backgroundColor: "green" }}></li>
+          <li className="color-preview" style={{backgroundColor: "yellow" }}></li>
+          <li className="color-preview" style={{backgroundColor: "#eead91" }}></li>
+          <li className="color-preview" style={{backgroundColor: "#806355" }}></li>
+          <li className="color-preview" style={{backgroundColor: "#3469b7" }}></li>
+          <li className="color-preview" style={{backgroundColor: "#c50404" }}></li>
+          </ul>
       </div>
     );
   }

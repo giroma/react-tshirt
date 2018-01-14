@@ -36,6 +36,9 @@ class App extends Component {
     this.changeColor = (e) => {
       this.setState({color: e.target.value})
     }
+    this.changeTextColor = (e) => {
+      this.setState({textColor: e.target.value})
+    }
   }
     //functions in constructor
 
