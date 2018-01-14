@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Price from './components/price';
 import CustomText from './components/customText';
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import Shirt from './components/shirt';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class App extends Component {
       price: 5555,
       type: 'tshirt',
       material: 'light-cotton',
-      color: 'green',
+      color: 'white',
       text: 'write here'
 
     }
@@ -25,20 +24,34 @@ class App extends Component {
     // }
     this.changeText = (e) => {
       // this.calculatePrice();
-      console.log();
       this.setState({text: e.target.value})
+    }
+    this.changeColor = (e) => {
+      // this.calculatePrice();
+      console.log(e.target.value);
+      this.setState({color: e.target.value})
     }
     //functions in constructor
   }
 
   render() {
-    console.log(this);
     return (
-      <div className="App">
-        <img style={{backgroundColor: "red", width: 500}} src="shirt.svg" />
-        <h1>whoop there it is </h1>
-        <Price price={this.state.price} color={this.state.color}/>
-        <CustomText text={this.state.text} changeText={this.changeText}/>
+      <div className="App" className="container">
+        <div className="row">
+          <div className="col-3">
+            <CustomText text={this.state.text} changeText={this.changeText}
+                        color={this.state.color} changeColor={this.changeColor}/>
+          </div>
+
+          <div className="col-6">
+            <Shirt text={this.state.text} changeText={this.changeText}
+                   color={this.state.color}/>
+          </div>
+
+          <div className="col">
+            <Price price={this.state.price} color={this.state.color}/>
+          </div>
+        </div>
       </div>
     );
   }
