@@ -5,13 +5,13 @@ class CustomText extends Component {
   render() {
     return (
       <div className="well">
-        <select>
-          <option selected>T-shirt</option>
-          <option>Sweater</option>
+        <select value={this.props.value} onChange={this.props.changeType}>
+          <option selected value="tshirt">T-shirt</option>
+          <option value="sweater">Sweater</option>
         </select>
         <select>
-          <option selected>Light-Cotton</option>
-          <option>Heavy-Cotton +$3</option>
+          <option selected value="light-cotton">Light-Cotton</option>
+          <option value="heavy-cotton">Heavy-Cotton +$3</option>
         </select>
         <select value={this.props.value} onChange={this.props.changeColor} >
           <option selected value="white">White</option>
@@ -19,7 +19,7 @@ class CustomText extends Component {
           <option value="green">Green +$2</option>
           <option value="red">Red +$2</option>
         </select>
-        <input value={this.props.text} onChange={this.props.changeText}></input>
+        <input value={this.props.state.text} onChange={this.props.changeText}></input>
       </div>
     );
     // ...

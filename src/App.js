@@ -8,10 +8,10 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      price: 5555,
       type: 'tshirt',
       material: 'light-cotton',
       color: 'white',
+      textColor: 'gray',
       text: 'write here'
 
     }
@@ -23,32 +23,37 @@ class App extends Component {
     //   this.setState({ price: total})
     // }
     this.changeText = (e) => {
-      // this.calculatePrice();
       this.setState({text: e.target.value})
     }
+    this.changeType = (e) => {
+      this.setState({type: e.target.value})
+    }
+    this.changeMaterial = (e) => {
+      this.setState({material: e.target.value})
+    }
     this.changeColor = (e) => {
-      // this.calculatePrice();
       this.setState({color: e.target.value})
     }
-    //functions in constructor
   }
+    //functions in constructor
 
   render() {
     return (
       <div className="container">
         <div className="row">
-          <div className="col">
-            <CustomText text={this.state.text} changeText={this.changeText}
-                        color={this.state.color} changeColor={this.changeColor}/>
+          <div className="col-md-4 border">
+            <CustomText state={this.state} changeText={this.changeText}
+                        changeType={this.changeType} changeMaterial={this.changeMaterial}
+                        changeColor={this.changeColor}/>
           </div>
 
-          <div className="col-6">
+          <div className="col-md-4 border">
             <Shirt text={this.state.text} changeText={this.changeText}
                    color={this.state.color}/>
           </div>
 
-          <div className="col">
-            <Price price={this.state.price} color={this.state.color}/>
+          <div className="col-md-4 border">
+            <Price state={this.state}/>
           </div>
         </div>
       </div>
