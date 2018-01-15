@@ -34,6 +34,7 @@ class Price extends Component {
           receipt.push(<p>Color<span>+${prices.sweaterColor}</span></p>)
         }
       }
+      //one last if for text color pricing
       if (this.props.state.textColor !== "white" && this.props.state.textColor !== "black") {
         totalPrice += prices.textColor
         receipt.push(<p>Text Color<span>+${prices.textColor}</span></p>)
@@ -43,7 +44,7 @@ class Price extends Component {
       <div className="price well">
         <h3>Price:</h3>
         {this.priceDisplay()}
-        {receipt}
+        {receipt} 
         <p><b>Total<span>${totalPrice}</span></b></p>
       </div>
     );

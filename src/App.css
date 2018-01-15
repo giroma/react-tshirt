@@ -1,4 +1,8 @@
 
+.nav {
+  display: inline-block;
+}
+
 .shirt {
   position: relative;
 }

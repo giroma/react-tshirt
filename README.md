@@ -3,7 +3,7 @@ Custom t-shirt creator!
 Choose clothing type, color, cotton, and write custom text.
 Pricing data automatically updated.
 
-To replicate this app run 'npm install' to install dependencies.
+To replicate this app use 'npm install' to install dependencies.
 To run use 'npm start'
 
 Made using:
