@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Price extends Component {
   render() {
-    const prices = {
+    const prices = {   //cost of various options
       tshirt: 16.95,
       sweater: 28.95,
       heavyCotton: 3,
@@ -10,14 +10,13 @@ class Price extends Component {
       sweaterColor: 4,
       textColor: 3
     }
-    let totalPrice = 0
-    let receipt = []
+    let totalPrice = 0  //add to this variable for tatal sum price
+    let receipt = [] //each array element is a line in the receipt
 
     this.priceDisplay = () => {
-      if (this.props.state.type === "tshirt"){
-        totalPrice = 0
-        totalPrice += prices.tshirt
-        receipt.push(<p>T-shirt<span>${prices.tshirt}</span></p>)
+      if (this.props.state.type === "tshirt"){  //if tshirt selected
+        totalPrice += prices.tshirt //add to total price
+        receipt.push(<p>T-shirt<span>${prices.tshirt}</span></p>) //add this jsx to the array for display later
         if (this.props.state.material === "heavy-cotton") {
           totalPrice += prices.heavyCotton
           receipt.push(<p>Heavy Cotton<span>+${prices.heavyCotton}</span></p>)
@@ -27,8 +26,7 @@ class Price extends Component {
           receipt.push(<p>Color<span>+${prices.tshirtColor}</span></p>)
         }
       }
-      else {  // sweaters
-        totalPrice = 0
+      else {  // sweater
         totalPrice += prices.sweater
         receipt.push(<p>Sweater<span>${prices.sweater}</span></p>)
         if (this.props.state.color === "pink" || this.props.state.color === "yellow") {

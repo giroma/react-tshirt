@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Price from './components/price';
-import CustomText from './components/customText';
+import Custom from './components/custom';
 import Shirt from './components/shirt';
 
 class App extends Component {
@@ -45,14 +45,19 @@ class App extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <CustomText state={this.state} changeText={this.changeText}
-                        changeType={this.changeType} changeMaterial={this.changeMaterial}
-                        changeColor={this.changeColor} changeTextColor={this.changeTextColor}/>
+            <Custom state={this.state}
+                    changeText={this.changeText}
+                    changeType={this.changeType}
+                    changeMaterial={this.changeMaterial}
+                    changeColor={this.changeColor}
+                    changeTextColor={this.changeTextColor}/>
           </div>
 
           <div className="col-md-4" style={{align: "center"}}>
-            <Shirt text={this.state.text} changeText={this.changeText}
-                   color={this.state.color} textColor={this.state.textColor}/>
+            <Shirt text={this.state.text}
+                   changeText={this.changeText}
+                   color={this.state.color}
+                   textColor={this.state.textColor}/>
           </div>
 
           <div className="col-md-4">

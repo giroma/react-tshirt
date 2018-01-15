@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CustomText extends Component {
+class Custom extends Component {
 
   render() {
     let isSweater = false
@@ -44,4 +44,4 @@ class CustomText extends Component {
   }
 }
 
-export default CustomText; // Don’t forget to use export default!
+export default Custom; 
