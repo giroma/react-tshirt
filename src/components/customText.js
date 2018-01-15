@@ -4,7 +4,7 @@ class CustomText extends Component {
 
   render() {
     let isSweater = false
-    if (this.props.state.type == "sweater") {
+    if (this.props.state.type === "sweater") {
       isSweater = true
     }
     return (
@@ -25,8 +25,10 @@ class CustomText extends Component {
           {isSweater ?  <option value="pink">Pink +$4</option>: "" }
           {isSweater ?  <option value="yellow">Yellow +$4</option>: "" }
         </select>
-        <input value={this.props.state.text} onChange={this.props.changeText}></input>
-        <ul class="nav" onClick={this.props.changeColor}>
+
+        <input className="text-input" value={this.props.state.text} onChange={this.props.changeText}></input>
+
+        <ul className="nav" onClick={this.props.changeTextColor}>
           <li className="color-preview" style={{backgroundColor: "white" }}></li>
           <li className="color-preview" style={{backgroundColor: "black" }}></li>
           <li className="color-preview" style={{backgroundColor: "#616161" }}></li>

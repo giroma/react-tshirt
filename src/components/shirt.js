@@ -6,7 +6,7 @@ class Shirt extends Component {
     return (
       <div className="shirt">
         <img style={{backgroundColor: this.props.color, width: 300}} src="shirt2.svg.png" alt="shirt" />
-        <div className="text">{this.props.text}</div>
+        <div className="text" style={{color: this.props.textColor}}>{this.props.text}</div>
       </div>
     );
   }

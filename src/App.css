@@ -28,10 +28,14 @@
 
 .text {
   position: absolute;
-  color: gray;
   font-size: 25px;
   top: 100px;
   left: 120px;
+}
+
+.text-input {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .shirt img{
@@ -41,7 +45,7 @@
 }
 
 .price {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .price span{
