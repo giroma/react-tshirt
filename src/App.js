@@ -5,40 +5,39 @@ import Custom from './components/custom';
 import Shirt from './components/shirt';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       type: 'tshirt',
       material: 'light-cotton',
       color: 'white',
       textColor: 'black',
       text: 'write here'
-
     }
+  }
 
-    this.changeText = (e) => {
+    changeText = (e) => {
       this.setState({text: e.target.value})
     }
 
-    this.changeType = (e) => {
+    changeType = (e) => {
       this.setState({type: e.target.value})
-      this.setState({material: 'light-cotton'})
+      this.setState({material: 'light-cotton'}) //set cotton and color to default to prevent unallowed color options
       this.setState({color: 'white'})
     }
 
-    this.changeMaterial = (e) => {
+    changeMaterial = (e) => {
       this.setState({material: e.target.value})
     }
 
-    this.changeColor = (e) => {
+    changeColor = (e) => {
       this.setState({color: e.target.value})
     }
 
-    this.changeTextColor = (e) => {
+    changeTextColor = (e) => {
       console.log(e.target);
       this.setState({textColor: e.target.style.backgroundColor})
     }
-  }
 
   render() {
     return (
